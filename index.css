@@ -1,25 +1,25 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(to right, #03228f, #0e6fe0);
   min-height: 100vh;
-  display: block;
+  display: flex; /* Changed from block to flex */
   align-items: center;
   justify-content: center;
 }
+
 .container {
-  margin: auto;
-  display: block;
+  margin: 1rem;
   background: white;
   padding: 2rem;
   border-radius: 12px;
   max-width: 650px;
+  width: 100%; /* Ensure it adapts to smaller screens */
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-#logo{
+
+#logo {
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -29,19 +29,23 @@ h2 {
   color: #333;
   margin-bottom: 1.5rem;
 }
+
 label {
   font-weight: bold;
   margin-top: 1rem;
   display: block;
   color: #333;
 }
+
 input {
   width: 100%;
   padding: 0.5rem;
   margin-top: 0.3rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+  box-sizing: border-box;
 }
+
 button {
   background: #007bff;
   color: white;
@@ -51,10 +55,14 @@ button {
   cursor: pointer;
   font-size: 1rem;
   transition: background 0.3s ease;
+  width: 100%; /* Makes button full-width on mobile */
+  margin-top: 1rem;
 }
+
 button:hover {
   background: #0056b3;
 }
+
 .result {
   margin-top: 1rem;
   padding: 1rem;
@@ -63,6 +71,7 @@ button:hover {
   border-radius: 6px;
   color: #333;
 }
+
 .result div {
   padding: 0.5rem 0;
   border-bottom: 1px solid #ccc;
@@ -71,12 +80,18 @@ button:hover {
 .result div:last-child {
   border-bottom: none;
 }
+
 .topology-icon {
   color: #28a745;
   margin-right: 5px;
 }
+
 @media (max-width: 600px) {
   .container {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  input, button {
+    font-size: 1rem;
   }
 }
