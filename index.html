@@ -12,20 +12,25 @@
     <img src="fibernet logo.png" alt="Fibernet Logo">
   </div>
   <div class="container">
-    <h2>Fiber Splitter Topology Finder</h2>
+    <h2>Fiber Optic Splitter-leg Topology Finder</h2>
     <label for="sourcePower">Source Power (dB):</label>
-    <input type="number" id="sourcePower" value="-13" step="any" />
+    <input type="number" id="sourcePower" value="0" step="any" />
 
     <label for="clients">Number of Clients:</label>
-    <input type="number" id="clients" value="16" />
+    <input type="number" id="clients" value="0" />
 
     <label for="threshold">Minimum Output Power (dB):</label>
-    <input type="number" id="threshold" value="-29" step="any" />
+    <input type="number" id="threshold" value="0" step="any" />
 
     <button onclick="findTopologies()">Find Feasible Topologies</button>
 
     <div id="results" class="result"></div>
-  </div>
+  </div><br>
+  <footer>
+    <p>&copy; 2025 Fibernet Broadband Limited. All Rights Reserved. PMA</p>
+    <div id="socials" class="footer-social">
+    </div>
+</footer>
 
   </body>
 </html>
